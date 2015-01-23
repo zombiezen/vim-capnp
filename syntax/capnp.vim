@@ -40,6 +40,8 @@ syn region capnpFold matchgroup=capnpBraces start="{" end="}" transparent fold
 
 " Literals
 syn region capnpString start=/"/ skip=/\\"/ end=/"/
+syn match capnpNumber /\<[0-9]\+/
+syn match capnpHex /\<0x[0-9a-fA-F]\+/
 
 " Highlighting
 hi link capnpComment      Comment
@@ -48,6 +50,8 @@ hi link capnpDeclaration  Structure
 hi link capnpKeyword      Keyword
 hi link capnpArrow        Operator
 hi link capnpString       String
+hi link capnpNumber       Number
+hi link capnpHex          Number
 hi link capnpType         Type
 hi link capnpBuiltinType  Type
 hi link capnpOrdinal      Identifier
